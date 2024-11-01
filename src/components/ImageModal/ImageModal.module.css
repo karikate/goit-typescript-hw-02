@@ -1,0 +1,32 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(37, 38, 65, 0.53);
+}
+
+.modal {
+  width: 75%;
+  height: 70%;
+  margin: 5% auto;
+  border-radius: 3%;
+  padding: 10px;
+  background: rgba(14, 9, 87, 0.621);
+  display: flex;
+  place-content: center;
+  flex-wrap: nowrap;
+}
+
+.info {
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  width: 80%;
+  margin-top: 5px;
+  gap: 10px;
+  padding: 5%;
+  font-size: large;
+}
