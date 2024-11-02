@@ -4,7 +4,6 @@ import s from "./ImageGallery.module.css";
 
 export interface ImageGallery {
   photos: Photo[];
-
   openModal: (photo: Photo) => void;
 }
 

@@ -1,5 +1,10 @@
 import s from "./LoadMoreBtn.module.css";
-const LoadMoreBtn = ({ setPage }) => {
+
+interface LoadMore {
+  setPage: () => void;
+}
+
+const LoadMoreBtn: React.FC<LoadMore> = ({ setPage }) => {
   return (
     <div className={s.wrapper}>
       <button className={s.button} onClick={setPage}>
