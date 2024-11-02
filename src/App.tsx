@@ -85,6 +85,9 @@ const App = () => {
       {isError && (
         <ErrorMessage message="Sorry, something went wrong. Please try again" />
       )}
+      {photos.length === 0 && !isLoading && !isError && (
+        <p>No images found for your search.</p>
+      )}
       {photos.length > 0 && <LoadMoreBtn setPage={handlerSetPage} />}
     </div>
   );
