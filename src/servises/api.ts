@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const fetchPhoto = async (query, page = 0) => {
+export const fetchPhoto = async (query: string, page = 0) => {
   const AccessKey = "8D7P1yJV46O80rFVy5nPpT81oO6pOspldbBTrXvhF6g";
   const BaseUrl = `https://api.unsplash.com/search/photos`;
 

@@ -3,11 +3,18 @@ import s from "./SearchBar.module.css";
 import { FaSearch } from "react-icons/fa";
 import toast, { Toaster } from "react-hot-toast";
 
-const SearchBar = ({ setQuery }) => {
+interface SearchBar {
+  setQuery: (query: string) => void;
+}
+interface Value {
+  query: string;
+}
+
+const SearchBar: React.FC<SearchBar> = ({ setQuery }) => {
   const initialValue = {
     query: "",
   };
-  const handlerSubmit = (values) => {
+  const handlerSubmit = (values: Value) => {
     if (!values.query) {
       toast("Please enter text to search for an image");
     }

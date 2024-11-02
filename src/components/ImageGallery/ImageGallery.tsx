@@ -1,6 +1,14 @@
+import { Photo } from "../../App";
 import ImageCard from "../ImageCard/ImageCard";
 import s from "./ImageGallery.module.css";
-const ImageGallery = ({ photos, openModal }) => {
+
+export interface ImageGallery {
+  photos: Photo[];
+
+  openModal: (photo: Photo) => void;
+}
+
+const ImageGallery: React.FC<ImageGallery> = ({ photos, openModal }) => {
   return (
     <div>
       <ul className={s.wrapper}>

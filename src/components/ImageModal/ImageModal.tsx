@@ -1,8 +1,24 @@
 import ReactModal from "react-modal";
 import s from "./ImageModal.module.css";
 import { FcLike } from "react-icons/fc";
+import { Photo } from "../../App";
 
-const ImageModal = ({ isOpen, handleCloseModal, photo }) => {
+export interface ImageModal {
+  isOpen: boolean;
+  handleOpenModal: (photo: Photo) => void;
+  handleCloseModal: () => void;
+  photo: Photo | null;
+}
+
+const ImageModal: React.FC<ImageModal> = ({
+  isOpen,
+  handleCloseModal,
+  photo,
+}) => {
+  if (!isOpen) return null;
+  if (!photo) {
+    return;
+  }
   const { urls, alt_description, description, user, likes } = photo;
 
   return (

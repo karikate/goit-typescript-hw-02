@@ -1,4 +1,11 @@
-const ImageCard = ({ photo, openModal }) => {
+import { Photo } from "../../App";
+
+interface ImageCard {
+  photo: Photo;
+  openModal: () => void;
+}
+
+const ImageCard: React.FC<ImageCard> = ({ photo, openModal }) => {
   return (
     <div>
       <img
